@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { EmployeesBirthList } from './EmployeesBirthList';
 import { EmployeesList } from './EmployeesList';
-import { GlobalStateType } from '../store';
-import { useSelector } from '../customUseSelector';
-import { getEmployees } from '../api';
+import { GlobalStateType } from '../../store';
+import { useSelector } from '../../customUseSelector';
+import { getEmployees } from '../../api';
 import { useDispatch } from 'react-redux';
 
 export const EmployeesPage: React.FC = () => {

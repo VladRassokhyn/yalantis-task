@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React from 'react';
-import { TEmployees } from '../types';
+import { TEmployees } from '../../types';
 import { MonthItem } from './MonthItem';
 
 export const EmployeesBirthList: React.FC<{ employees: TEmployees[] }> = ({

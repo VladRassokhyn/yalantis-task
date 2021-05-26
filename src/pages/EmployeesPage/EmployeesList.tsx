@@ -1,5 +1,5 @@
 import React from 'react';
-import { TEmployees } from '../types';
+import { TEmployees } from '../../types';
 import { AlphaItem } from './AlphaItem';
 
 export const EmployeesList: React.FC<{ employees: TEmployees[] }> = ({

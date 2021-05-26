@@ -1,7 +1,7 @@
 import React from 'react';
-import { TEmployees } from '../types';
+import { TEmployees } from '../../types';
 import { useDispatch } from 'react-redux';
-import { setActive } from '../actions';
+import { setActive } from '../../actions';
 
 export const EmployeeItem: React.FC<{ employee: TEmployees }> = ({
   employee,

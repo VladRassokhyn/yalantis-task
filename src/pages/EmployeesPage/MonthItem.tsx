@@ -1,5 +1,5 @@
 import React from 'react';
-import { TEmployees } from '../types';
+import { TEmployees } from '../../types';
 import moment from 'moment';
 
 export const MonthItem: React.FC<{ employees: TEmployees[]; month: string }> =
