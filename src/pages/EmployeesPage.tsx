@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { EmployeesBirthList } from './EmployeesBirthList';
 import { EmployeesList } from './EmployeesList';
 import { GlobalStateType } from '../store';
-import { useSelector } from '../castomUseSelector';
+import { useSelector } from '../customUseSelector';
 import { getEmployees } from '../api';
 import { useDispatch } from 'react-redux';
 
-export const EmployeesPage = () => {
+export const EmployeesPage: React.FC = () => {
   const dispatch = useDispatch();
   const { employees } = useSelector<GlobalStateType>(state => ({
     employees: state.employees,
