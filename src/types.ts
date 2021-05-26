@@ -6,7 +6,7 @@ export type TEmployees = {
   active: boolean;
 };
 
-export type TSetEmpoyees = { type: string; payload: TEmployees[] };
-export type TActiveToggle = { type: string; id: string };
+export type TSetEmpoyees = { type: "SET_EMPLOYEES"; payload: TEmployees[] };
+export type TActiveToggle = { type: "ACTIVE_TOGGLE", id: string };
 
-export type TEmployeesActions = TSetEmpoyees & TActiveToggle;
+export type TEmployeesActions = TSetEmpoyees | TActiveToggle;
