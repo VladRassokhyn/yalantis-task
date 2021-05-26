@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 100px 1fr;
+}
+
+.employees-birth-list-wrapper {
+  border-left: 1px solid black;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin: 10px 0 0;
+}
+
+.employee-item-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.employees-list-wrapper {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: row;
+  max-width: 70vw;
+  flex-wrap: wrap;
+}
+
+.alpha-item-wrapper {
+  min-width: 12vw;
+}
+
+.month-item-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  font-weight: 700;
+}
+
+.months-wrapper {
+  border-top: 1px solid black;
+}
