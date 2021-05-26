@@ -6,7 +6,6 @@ const rootReducers = combineReducers({
   employees: employeesReducer,
 });
 
-type RootReducersType = typeof rootReducers;
-export type GlobalStateType = ReturnType<RootReducersType>;
+export type GlobalStateType = ReturnType<typeof rootReducers>;
 
 export const store = createStore(rootReducers, applyMiddleware(thunk));
