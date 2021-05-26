@@ -1,5 +1,5 @@
 import { employeesReducer } from '../reducers/employeesReducer';
-import { TEmployees } from '../types';
+import { TActiveToggle, TEmployees, TSetEmpoyees } from '../types';
 
 const state: TEmployees[] = [
   {
@@ -49,13 +49,13 @@ const payload = [
 ];
 
 it('SET_EMPLOYEES must add employees to state', () => {
-  const action = { type: 'SET_EMPLOYEES', payload };
+  const action: TSetEmpoyees = { type: 'SET_EMPLOYEES', payload };
 
   expect(employeesReducer(state, action)).toHaveLength(6);
 });
 
 it('employees must be sorted by lastName', () => {
-  const action = { type: 'SET_EMPLOYEES', payload };
+  const action: TSetEmpoyees = { type: 'SET_EMPLOYEES', payload };
 
   expect(employeesReducer(state, action)[0].lastName).toEqual('A');
   expect(employeesReducer(state, action)[1].lastName).toEqual('B');
@@ -63,7 +63,7 @@ it('employees must be sorted by lastName', () => {
 });
 
 it('ACTIVE_TOGGLE must change "active" status', () => {
-  const action = { type: 'ACTIVE_TOGGLE', id: '2' };
+  const action: TActiveToggle = { type: 'ACTIVE_TOGGLE', id: '2' };
 
   expect(employeesReducer(state, action)[0].active).toEqual(false);
   expect(employeesReducer(state, action)[1].active).toEqual(true);
@@ -71,7 +71,7 @@ it('ACTIVE_TOGGLE must change "active" status', () => {
 });
 
 it('ACTIVE_TOGGLE must save "active" status to localStorage', () => {
-  const action = { type: 'ACTIVE_TOGGLE', id: '2' };
+  const action: TActiveToggle = { type: 'ACTIVE_TOGGLE', id: '2' };
 
   const item = employeesReducer(state, action)[2];
 
