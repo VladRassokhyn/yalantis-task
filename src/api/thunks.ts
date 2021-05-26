@@ -1,10 +1,10 @@
 import { EmployeesAPI } from './api';
 import { Dispatch } from 'react';
-import { TSetEmpoyees } from '../types';
+import { TSetEmployees } from '../types';
 import { setEmployees } from '../actions';
 
 export const getEmployees = () => {
-  return async (dispatch: Dispatch<TSetEmpoyees>) => {
+  return async (dispatch: Dispatch<TSetEmployees>) => {
     try {
       const payload = await EmployeesAPI.getEmployees();
       dispatch(setEmployees(payload.data));

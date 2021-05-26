@@ -1,5 +1,5 @@
 import { employeesReducer } from '../reducers/employeesReducer';
-import { TActiveToggle, TEmployees, TSetEmpoyees } from '../types';
+import { TActiveToggle, TEmployees, TSetEmployees } from '../types';
 
 const state: TEmployees[] = [
   {
@@ -49,13 +49,13 @@ const payload = [
 ];
 
 it('SET_EMPLOYEES must add employees to state', () => {
-  const action: TSetEmpoyees = { type: 'SET_EMPLOYEES', payload };
+  const action: TSetEmployees = { type: 'SET_EMPLOYEES', payload };
 
   expect(employeesReducer(state, action)).toHaveLength(6);
 });
 
 it('employees must be sorted by lastName', () => {
-  const action: TSetEmpoyees = { type: 'SET_EMPLOYEES', payload };
+  const action: TSetEmployees = { type: 'SET_EMPLOYEES', payload };
 
   expect(employeesReducer(state, action)[0].lastName).toEqual('A');
   expect(employeesReducer(state, action)[1].lastName).toEqual('B');

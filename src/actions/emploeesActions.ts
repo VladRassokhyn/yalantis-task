@@ -1,6 +1,6 @@
-import { TActiveToggle, TEmployees, TSetEmpoyees } from '../types';
+import { TActiveToggle, TEmployees, TSetEmployees } from '../types';
 
-export const setEmployees = (payload: TEmployees[]): TSetEmpoyees => ({
+export const setEmployees = (payload: TEmployees[]): TSetEmployees => ({
   type: 'SET_EMPLOYEES',
   payload,
 });
